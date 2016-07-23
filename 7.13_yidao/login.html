@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style>
+			*{margin: 0;padding: 0;}
+			img{display: block;border: none;}
+			
+			.logo{width: 640px;height: 250px;}
+			.logo_color{width: 170px;height: 56px;padding-top: 97px;padding-left: 235px;}
+		
+		</style>
+	</head>
+	<body>
+		<div class="logo">
+			<img class="logo_color" src="images/logoColors.png" />
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		
+	</body>
+	
+	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		function bodyScale(){
+			var devicewidth=document.documentElement.clientWidth;
+			var scale=devicewidth/640;
+			document.body.style.zoom=scale;
+		}
+		window.onload=window.onresize=function(){
+			bodyScale();
+		}
+		
+		
+	</script>
+</html>

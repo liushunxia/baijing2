@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style>
+			*{margin:0 ;padding: 0;}
+			img{display: block;border: none;}
+			.swiper-container{width: 640px;height: 1148px;}
+			.swiper-wrapper{width: 640px;height: 1148px;}				
+			.swiper-slide{width: 640px;height: 1148px;position: relative;background: #f8f3f7;}
+			.page1{width: 640px;background: url(images/index_bg.jpg) 0 0 no-repeat;
+			background-size: cover;}
+			.logo{margin: 5%;}
+			.p1-t1{position: absolute;left: 60px;top: 220px;}
+			.p1-t2{position: absolute;left: 60px;top: 350px;}
+			.p1-t3{position: absolute;left: 60px;top: 420px;}
+			.p1-btm{position: absolute;bottom: 0;}
+			.lights1{position: absolute;left: 10px;bottom: 85px;z-index: 10;
+			animation: bling1 2s 1s linear infinite alternate;}
+			@keyframes bling1{
+				from{width: 75px;height: 75px;opacity: 0;}
+				to{width: 80px;height: 80px;opacity: 0.9;}
+			}
+			.lights2{position: absolute;left: 240px;bottom: 260px;z-index: 10;
+			animation: bling2 2s 2s linear infinite alternate;}
+			@keyframes bling2{
+				from{width: 85px;height: 85px;opacity: 0;}
+				to{width: 90px;height: 90px;opacity: 0.9;}
+			}
+			.lights3{position: absolute;left: 300px;bottom: 140px;z-index: 10;
+			animation: bling3 2s 3s linear infinite alternate;}
+			@keyframes bling3{
+				from{width: 115px;height: 115px;opacity: 0;}
+				to{width: 120px;height: 120px;opacity: 0.9;}
+			}
+			.lights4{position: absolute;left: 460px;bottom: 230px;z-index: 10;
+			animation: bling4 2s 2s linear infinite alternate;}
+			@keyframes bling4{
+				from{width: 65px;height: 65px;opacity: 0;}
+				to{width: 70px;height: 70px;opacity: 0.9;}
+			}
+			.lights5{position: absolute;left: 560px;bottom: 130px;z-index: 10;
+			animation: bling5 2s 1s linear infinite alternate;}
+			@keyframes bling5{
+				from{width: 75px;height: 75px;opacity: 0;}
+				to{width: 85px;height: 85px;opacity: 0.9;}
+			}
+	        .arrow{position: absolute;bottom: 20px;left: 280px;
+	        animation: arrow  infinite ease-in-out;animation-duration: 1.5s;}
+	       @keyframes arrow{
+				0%{opacity:0;transform:translate(0,0)}
+				30%{opacity:0;transform:translate(0,17px)}
+				60%{opacity:1;transform:translate(0,0)}
+				100%{opacity:0;transform:translate(0,0)}
+			}
+	        .page2{width: 640px;background: url(images/page2bg.png) 0 0 no-repeat;
+			background-size: cover;}
+			.red{position: absolute;width: 640px;height: 200px;background: #ee4136;
+			top: 500px;}
+			.p2-t1{position: absolute;top: 530px;left: 150px;font-size: 47px;color: white;
+			font-family: "微软雅黑";}
+			.p2-t2{position: absolute;top: 600px;left: 170px;font-size: 37px;color: white;
+			font-family: "微软雅黑";}
+			
+			.page3{width: 640px;background: url(images/page3-bg.png) 0 0 no-repeat;
+			background-size: cover;}
+			.p3-img1{position: absolute;width: 186px;height: 186px;border:10px solid  rgba(238,65,54,0.5);
+			border-radius: 50%;top:5%;left:15%;animation:move1 8s infinite ease-in -13s;}
+			.p3-img2{position: absolute;width: 186px;height: 186px;border:10px solid  rgba(238,65,54,0.5);
+			border-radius: 50%;top:35%;right:15%;animation:move3 8s infinite ease-in -14s;}
+			.p3-img3{position: absolute;width: 156px;height: 156px;border:10px solid  rgba(238,65,54,0.5);
+			border-radius: 50%;top:35%;left:5%;animation:move2 8s infinite ease-in -15s;}
+			.p3-img4{position: absolute;width: 186px;height: 186px;border:10px solid  rgba(238,65,54,0.5);
+			border-radius: 50%;bottom:10%;right:15%;animation:move1 8s infinite ease-in -16s;}
+			
+			@keyframes move1{
+				0%{transform:translate(0,0) scale(0.9,.9);opacity:.5}
+				25%{transform:translate(50px,50px) scale(1,1);opacity:1}
+				50%{transform:translate(100px,100px) scale(0.9,.9);opacity:.5}
+				75%{transform:translate(50px,50px) scale(0.8,.8);opacity:.3}
+				100%{transform:translate(0,0) scale(0.9,.9);opacity:.5}
+			}
+			@keyframes move2{
+				0%{transform:translate(0,0) scale(0.9,.9);opacity:.5}
+			    25%{transform:translate(0,50px) scale(1,1);opacity:1}
+			    50%{transform:translate(0,100px) scale(0.9,.9);opacity:.5}
+			    75%{transform:translate(0,50px) scale(0.8,.8);opacity:.3}
+			    100%{transform:translate(0,0) scale(0.9,.9);opacity:.5}
+			}
+			@-webkit-keyframes move3{
+			    0%{-webkit-transform:translate(0,0) scale(0.9,.9);opacity:.7}
+			    25%{-webkit-transform:translate(-25px,25px) scale(1,1);opacity:1}
+			    50%{-webkit-transform:translate(-50px,50px) scale(0.9,.9);opacity:.7}
+			    75%{-webkit-transform:translate(-25px,25px) scale(0.8,.8);opacity:.5}
+			    100%{-webkit-transform:translate(0,0) scale(0.9,.9);opacity:.7}
+            }
+			.dot1{border: solid 15px #ee4136;position: absolute;border-radius: 50%;top: 12%;
+			left: 8%;border-width: 10px;animation:move1 8s infinite ease-in -1s;}
+			.dot2{top: 15%;right: 15%;border: solid 15px #ee4136;position: absolute;
+            border-radius: 50%;animation:move3 8s infinite ease-in -2s;}
+            .dot3{top: 5%;right: 25%;border-width: 20px;border: solid 15px #ee4136;
+            position: absolute;border-radius: 50%;animation:move2 8s infinite ease-in -3s;}
+            .dot4{top: 25%;right: 25%;border-width: 7px;border: solid 15px #ee4136;
+            position: absolute;border-radius: 50%;animation:move1 8s infinite ease-in -4s;}
+            .dot5{bottom: 22%;left: 10%;border-width: 16px;border: solid 15px #ee4136;
+             position: absolute;border-radius: 100%;animation:move3 8s infinite ease-in -5s;}
+             .dot6{bottom: 10%;left: 25%;border-width: 12px;border: solid 15px #ee4136;
+            position: absolute;border-radius: 100%;animation:move2 8s infinite ease-in -6s;}
+            .dot7{bottom: 30%;left: 26%;border-width: 12px;border: solid 15px #ee4136;
+            position: absolute;border-radius: 100%;animation:move1 8s infinite ease-in -7s;}
+            
+            .page4{width: 640px;background: url(images/normal_bg.jpg) 0 0 no-repeat;
+			background-size: cover;}
+            
+            .page5{width: 640px;background: url(images/living_bg.jpg) 0 0 no-repeat;
+			background-size: cover;}
+			.page5 img{border-radius: 50%;position: absolute;overflow: hidden;
+            border: solid 10px rgba(238,65,54,0.5)}
+            .p5-img1{top: 3%;right: 3%;animation:move1 8s infinite ease-in -13s;}
+            .p5-img2{top: 4%;left: 2%;animation:move3 8s infinite ease-in -14s;}
+		    .p5-img3{top: 20%;right: 28%;animation:move2 8s infinite ease-in -15s;}
+		    .p5-img4{top: 40%;left: 5%;animation:move1 8s infinite ease-in -16s;}
+		    .p5-img5{top: 40%;right: 5%;animation:move3 8s infinite ease-in -17s;}
+		    .p5-img6{bottom: 20%;right: 35%;animation:move2 8s infinite ease-in -18s;}
+		    .p5-img7{bottom: 3%;left: 3%;animation:move1 8s infinite ease-in -19s;}
+		    .p5-img8{bottom: 3%;right: 3%;animation:move3 8s infinite ease-in -20s;}
+		    .dot8{border: solid 15px #ee4136;position: absolute; border-radius: 100%;top: 3%;
+            left: 40%;border-width: 12px; animation:move1 8s infinite ease-in -8s;}
+            .dot9{border: solid 15px #ee4136;position: absolute;border-radius: 100%;
+            top: 8%;left: 50%;border-width: 18px;animation: move2 8s infinite ease-in -9s;}
+            .dot10{top: 30%;left: 5%;border-width: 22px;border: solid 15px #ee4136;
+            position: absolute;border-radius: 100%;animation: move3 8s infinite ease-in -10s;}
+            .dot11{bottom: 35%;right: 8%;border-width: 20px;border: solid 15px #ee4136;
+            position: absolute;border-radius: 100%;animation: move1 8s infinite ease-in -11s;}
+            .dot12{bottom: 25%;right: 22%;border-width: 15px;border: solid 15px #ee4136;
+            position: absolute;border-radius: 100%;animation: move2 8s infinite ease-in -12s;}
+            .page6{width: 640px;background: url(images/page1bg.png) 0 0 no-repeat;
+			background-size: 100% 100%;}
+			.circle{width: 300px;height: 300px;background: white;border-radius: 50%;
+			position: absolute;left: 28%;top: 40%;}
+			.p6-img1{position: absolute;left: 42%;top: 44%;animation: click1 0.2s linear infinite alternate;}
+			.p6-img2{position: absolute;left: 46%;top: 48%;animation: click2 0.5s linear infinite alternate;}
+			.p6-img3{position: absolute;left: 35%;top: 56%;}
+			@keyframes click1{
+				from{top:44%}
+				to{top:44.3%}
+			}
+			@keyframes click2{
+				from{top: 48%;}
+				to{top: 48.8%;}
+			}
+		
+		
+		    .circle2{width: 300px;height: 300px;background: white;position: absolute;left: 28%;top: 40%;
+		    opacity: 0.6;animation: cir1 1.5s linear infinite alternate;border-radius: 50%;}
+		    .circle3{width: 300px;height: 300px;background: white;position: absolute;left: 28%;top: 40%;
+		    opacity: 0.3;animation: cir2 1.5s linear infinite alternate;border-radius: 50%;}
+		    @keyframes cir1{
+		    	from{transform: scale(1,1);}
+		    	to{transform: scale(2,2)}
+		    }
+		    @keyframes cir2{
+		    	from{transform: scale(1,1);}
+		    	to{transform: scale(3,3)}
+		    }
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+	</head>		
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<!--第1页-->
+				<div class="swiper-slide page1">
+					<img class="ani logo" src="images/logos.png" swiper-animate-effect="fadeIn" swiper-animate-duration="0.6s" swiper-animate-delay="0.3s"/>
+					<img class="ani p1-t1" src="images/index_txt_01.png" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.5s"/>
+					<img class="ani p1-t2" src="images/index_txt_02.png" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.8s"/>
+					<img class="ani p1-t3" src="images/index_txt_03.png" swiper-animate-effect="fadeIn" swiper-animate-duration="1.5s" swiper-animate-delay="1.3s"/>
+					<img class="ani lights1" src="images/lights.png"/>
+					<img class="ani lights2" src="images/lights.png"/>
+					<img class="ani lights3" src="images/lights.png"/>
+					<img class="ani lights4" src="images/lights.png"/>
+					<img class="ani lights5" src="images/lights.png"/>
+					<img class="ani p1-btm" src="images/car.png" swiper-animate-effect="fadeIn" swiper-animate-duration="1.8s" swiper-animate-delay="1.5s"/>
+			        <img class="arrow" src="images/arrow-up.png" />
+				</div>
+				<!--第2页-->
+				<div class="swiper-slide page2">
+					<div class="ani red" swiper-animate-effect="fadeIn" swiper-animate-duration="0.9s" swiper-animate-delay="0.3s"></div>
+					<div class="ani p2-t1" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.9s" swiper-animate-delay="0.6s">我们工作在易道</div>
+					<div class="ani p2-t2" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.9s" swiper-animate-delay="0.9s">We Work Here</div>
+					<img class="arrow" src="images/arrow-up.png" />
+				</div>
+				<!--第3页-->
+				<div class="swiper-slide page3">
+					<img class="p3-img1" src="images/working_photo_01.jpg" />
+					<img class="p3-img2" src="images/working_photo_02.jpg" />
+					<img class="p3-img3" src="images/working_photo_03.jpg" />
+					<img class="p3-img4" src="images/working_photo_04.jpg" />
+					<p class="dot1"></p>
+					<p class="dot2"></p>
+					<p class="dot3"></p>
+					<p class="dot4"></p>
+					<p class="dot5"></p>
+					<p class="dot6"></p>
+					<p class="dot7"></p>
+					<img class="arrow" src="images/arrow-up.png" />
+				</div>
+				<!--第4页-->
+				<div class="swiper-slide page4">
+					<div class="ani red" swiper-animate-effect="fadeIn" swiper-animate-duration="0.9s" swiper-animate-delay="0.3s"></div>
+					<div class="ani p2-t1" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.9s" swiper-animate-delay="0.6s">我们生活在易道</div>
+					<div class="ani p2-t2" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.9s" swiper-animate-delay="0.9s">We Live Here</div>
+					<img class="arrow" src="images/arrow-up.png" />
+				</div>
+				<!--第5页-->
+				<div class="swiper-slide page5">
+					<img class="p5-img1" src="images/living_photo_01.jpg" />
+					<img class="p5-img2" src="images/living_photo_02.jpg" />
+					<img class="p5-img3" src="images/living_photo_03.jpg" />
+					<img class="p5-img4" src="images/living_photo_04.jpg" />
+					<img class="p5-img5" src="images/living_photo_05.jpg" />
+					<img class="p5-img6" src="images/living_photo_06.jpg" />
+					<img class="p5-img7" src="images/living_photo_07.jpg" />
+					<img class="p5-img8" src="images/living_photo_08.jpg" />
+					<p class="dot1"></p>
+					<p class="dot2"></p>
+					<p class="dot3"></p>
+					<p class="dot4"></p>
+					<p class="dot5"></p>
+					<p class="dot6"></p>
+					<p class="dot7"></p>
+					<p class="dot8"></p>
+					<p class="dot9"></p>
+					<p class="dot10"></p>
+					<p class="dot11"></p>
+					<p class="dot12"></p>
+					<img class="arrow" src="images/arrow-up.png" style="border: none;"/>
+				</div>
+				<!--第6页-->
+				<div class="swiper-slide page6">
+					<div class="circle"></div>
+					<div class="circle2"></div>
+					<div class="circle3"></div>
+					<img class="p6-img1" src="images/clickHere.png" />
+					<img class="p6-img2" src="images/iconsArea.png" />
+					<img class="p6-img3" src="images/endJoin.png" />
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper-3.3.1.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.animate1.0.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+			var mySwiper=new Swiper('.swiper-container',{
+				        direction: 'vertical',
+						onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+						    swiperAnimateCache(swiper); //隐藏动画元素 
+						    swiperAnimate(swiper); //初始化完成开始动画
+						  }, 
+						  onSlideChangeEnd: function(swiper){ 
+						    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+						  } 
+				})
+	
+	
+		function bodyScale(){
+			var devicewidth=document.documentElement.clientWidth;
+			var scale=devicewidth/640;
+			document.body.style.zoom=scale;
+		}
+		window.onload=window.onresize=function(){
+			bodyScale();
+		}
+		
+		$('.p6-img3').click(function(){
+				window.location.href="zhitongche.html";
+			})
+	</script>
+</html>

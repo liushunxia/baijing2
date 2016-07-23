@@ -1,0 +1,29 @@
+<project name="project" default="">
+    <property file="application.properties"/>
+    <property name="projectHome" value="."/>
+
+    <target name="build-ci" depends="deploy-yongche,restart-yongche"/>
+
+	<!--
+    <target name="up" description="UPDATE Html">
+        <sshexec host="${server.yongche.ip}" username="root" port="${server.yongche.port}" keyfile="${server.keyfile}"
+                 command="${server.yongche.up}" failonerror="false"/>
+    </target>
+	-->
+    <target name="deploy-yongche" description="--> The deploy target (yongche Env)">
+        <sshexec host="${server.yongche.ip}" username="${server.username}" trust="true" port="${server.yongche.port}"
+                 keyfile="${server.keyfile}" command="${server.yongche.rsync}" />
+    </target>
+	
+    <target name="restart-yongche" description="Restart Server">
+        <sshexec host="${server.yongche.ip}" username="root" port="${server.yongche.port}" keyfile="${server.keyfile}"
+                 command="${server.yongche.restart}" failonerror="false"/>
+    </target>
+
+</project>
+
+
+
+
+
+

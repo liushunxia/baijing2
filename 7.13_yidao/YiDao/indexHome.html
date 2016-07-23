@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="ui-viewport-640 mobile ks-webkit600 ks-webkit" lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <title>易到用车 - 让美好更易到！</title>
+    <meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+    <script src="script/jquery-1.8.2.js"></script>
+    <link href="style/aio.min.css" rel="stylesheet" type="text/css">
+    <link href="style/animate.min.css" rel="stylesheet" type="text/css">
+    <script src="style/aio.min.js"></script>
+    <link href="style/yongche.css" rel="stylesheet" type="text/css">
+    <script src="style/wei-user.js"></script>
+
+    <script>
+        //获取浏览器页面可见高度和宽度
+        var _PageHeight = document.documentElement.clientHeight,
+                _PageWidth = document.documentElement.clientWidth;
+        //计算loading框距离顶部和左部的距离（loading框的宽度为215px，高度为61px）
+        var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
+                _LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
+        //在页面未加载完毕之前显示的loading Html自定义内容
+        var _LoadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:100%;px;top:0;background:#fff;z-index:10000;"><div class="login_inner" style=" top:' + _LoadingTop + 'px;"></div></div>';
+        //呈现loading效果
+        document.write(_LoadingHtml);
+
+        window.onload = function () {
+            var loadingMask = document.getElementById('loadingDiv');
+            loadingMask.parentNode.removeChild(loadingMask);
+        };
+
+        //监听加载状态改变
+        document.onreadystatechange = completeLoading;
+
+        //加载状态为complete时移除loading效果
+        function completeLoading() {
+//            if (document.readyState == "complete") {
+//                var loadingMask = document.getElementById('loadingDiv');
+//                loadingMask.parentNode.removeChild(loadingMask);
+//            }
+        }
+    </script>
+</head>
+<body>
+<img src="images/avatar.jpg" alt="" style="opacity: 0;position:absolute;"/>
+<!-- container -->
+<div class="container">
+    <div class="content">
+        <div class="content-body">
+            <div class="ui-loading js-loading" style="display: none;">
+                <i class="fa fa-circle-o-notch fa-spin- fa-3x">
+                </i>
+            </div>
+            <div class="music_btn active"></div>
+            <div class="power-scroll-container js-power-scroll-container" style="">
+                <div class="swiper-container js-power-scroll" data-options="{&quot;hashNav&quot;:false,&quot;mode&quot;:&quot;vertical&quot;,&quot;loop&quot;:false,&quot;shadow&quot;:true}">
+                    <div class="swiper-wrapper slide_index">
+                        <div class="swiper-slide page_end" data-hash="end">
+                            <div class="slide-wrapper fadeIn animated">
+                                <div class="guide-join-box borderout animated infinite delay_500ms">
+                                    <div class="guide-join borderout2 animated infinite delay_500ms">
+                                        <a class="clickhere" href="javascript:void(0)">
+                                            <img src="images/yidaoLogo.png" alt="" />
+                                            <img style="margin: -84px 0px 0px 125px;" src="images/shouxing.png" alt="" class="qqshake animated infinite" />
+
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <img src="images/clickzi.png" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="ui-up-arrow" style="display: block;padding:0 0 10%;">
+                                    <a href="javascript:">
+                                        <img src="images/arrow-up.png" alt="滑动提示">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--<div class="swiper-slide page_index" data-hash="index" style="">
+                            <div class="slide-wrapper ">
+                                <h1 class="logo fadeIn animated">
+                                    <img src="images/logos.png" alt=""/>
+                                </h1>
+                                <div class="car fadeIn animated delay_1s" >
+                                    <ul class="lights fadeIn animated delay_1500ms">
+                                        <li class="l l01 qqflash animated infinite delay_300ms"> <img src="images/lights.png" alt="" /> </li>
+                                        <li class="l l02 qqflash animated infinite delay_400ms"> <img src="images/lights.png" alt="" /> </li>
+                                        <li class="l l03 qqflash animated infinite delay_500ms"> <img src="images/lights.png" alt="" /> </li>
+                                        <li class="l l04 qqflash animated infinite delay_600ms"> <img src="images/lights.png" alt="" /> </li>
+                                        <li class="l l05 qqflash animated infinite delay_700ms"> <img src="images/lights.png" alt="" /> </li>
+                                        <li class="l l06 qqflash animated infinite delay_800ms"> <img src="images/lights.png" alt="" /> </li>
+                                        <li class="l l07 qqflash animated infinite delay_900ms"> <img src="images/lights.png" alt="" /> </li>
+                                    </ul>
+                                    <img src="images/car.png" alt=""/>
+                                </div>
+                                <ul class="txtlist">
+                                    <li class="txt fadeIn animated delay_300ms"> <img src="images/index_txt_01.png" alt="" /> </li>
+                                    <li class="txt fadeIn animated delay_500ms"> <img src="images/index_txt_02.png" alt="" /> </li>
+                                    <li class="txt fadeIn animated delay_700ms"> <img src="images/index_txt_03.png" alt="" /> </li>
+                                </ul>
+                                <div class="ui-up-arrow" style="display: block;padding:0 0 10%;">
+                                    <a href="javascript:">
+                                        <img src="images/arrow-up.png" alt="滑动提示">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="swiper-slide page_working" data-hash="working_title" style="">
+                            <div class="slide-wrapper ">
+                               <div>
+                                   <div style="height: 116px;">
+                                       <p class="bounceInLeft animated delay_500ms"><b>我们工作在易到</b></p>
+                                   </div>
+                                   <div style="height: 116px">
+                                       <p class="page2-text fadeInDown animated delay_800ms"><b>公司介绍</b></p>
+                                   </div>
+                                   <div>
+
+                                   </div>
+
+                                   <p class="page2-text2 fadeInDown animated delay_800ms"><b>易到用车网（北京东方车云信息技术有限公司）创立于2010年，是智能交通和汽车分享理念的引领者。</b></p>
+                                   <div style="height: 192px;;">
+                                       <p class="page2-text3 fadeInDown animated delay_800ms"><b>更能让用户享受到真正愉悦的出行</b></p>
+                                   </div>
+
+                                   <p class="page2-text4 fadeInDown animated delay_800ms"><b>我们相信通过</b></p>
+                                   <p class="page2-text4 fadeInDown animated delay_800ms"><b>移动互联网新技</b></p>
+                                   <p class="page2-text4 fadeInDown animated delay_800ms"><b>术和Car Sharing</b></p>
+                                   <p class="page2-text4 fadeInDown animated delay_800ms"><b>新理念，不但能够有</b></p>
+                                   <p class="page2-text4 fadeInDown animated delay_800ms"><b>效提高汽车使用效率。</b></p>
+                                   <div style="position: absolute;bottom: 403px;left: 300px; " class="fadeIn animated delay_800ms">
+                                       <img src="images/page2-car.png" alt=""/>
+                                   </div>
+                                   <div style="position: absolute;bottom: 28px;left: 206px; " class="rotateIn animated delay_800ms">
+                                       <img src="images/page2-text5.png" alt=""/>
+                                   </div>
+                               </div>
+                                <div class="ui-up-arrow" style="display: block;padding:0 0 10%;">
+                                    <a href="javascript:">
+                                        <img src="images/arrow-up.png" alt="滑动提示">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide page_working_photos" data-hash="working_photos" >
+                            <div class="slide-wrapper fadeIn animated">
+                                <div class="" style="width: 200px;height: 200px;text-align:center;background:#000;border-radius:100%;position: absolute;top: 60%;left: 10px;filter:alpha(opacity=50);opacity:0.5;">
+
+                                </div>
+                                <div class="ui-up-arrow" style="display: block;padding:0 0 10%;">
+                                    <a href="javascript:">
+                                        <img src="images/arrow-up.png" alt="滑动提示">
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide page_living" data-hash="living_title">
+                            <div class="slide-wrapper ">
+                                <div class="txtbox fadeIn animated">
+                                    <p class="cn bounceInLeft animated delay_500ms"><b>我们生活在易到</b></p>
+                                    <p class="en bounceInLeft animated delay_800ms"><b>We  Live  Here</b></p>
+                                </div>
+                                <div class="ui-up-arrow" style="display: block;padding:0 0 10%;">
+                                    <a href="javascript:">
+                                        <img src="images/arrow-up.png" alt="滑动提示">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide page_living_photos" data-hash="living_photos" >
+                            <div class="slide-wrapper fadeIn animated">
+                                <ul class="photolist living_photolist">
+                                    <li class="imgs limg01 "><img src="images/living_photo_01.jpg" alt=""/></li>
+                                    <li class="imgs limg02 "><img src="images/living_photo_02.jpg" alt=""/></li>
+                                    <li class="imgs limg03 "><img src="images/living_photo_03.jpg" alt=""/></li>
+                                    <li class="imgs limg04 "><img src="images/living_photo_04.jpg" alt=""/></li>
+                                    <li class="imgs limg05 "><img src="images/living_photo_05.jpg" alt=""/></li>
+                                    <li class="imgs limg06 "><img src="images/living_photo_06.jpg" alt=""/></li>
+                                    <li class="imgs limg07 "><img src="images/living_photo_07.jpg" alt=""/></li>
+                                    <li class="imgs limg08 "><img src="images/living_photo_08.jpg" alt=""/></li>
+                                </ul>
+                                <ul class="dotslist">
+                                    <li class="dot dot01"></li>
+                                    <li class="dot dot02"></li>
+                                    <li class="dot dot03"></li>
+                                    <li class="dot dot04"></li>
+                                    <li class="dot dot05"></li>
+                                    <li class="dot dot06"></li>
+                                    <li class="dot dot07"></li>
+                                    <li class="dot dot08"></li>
+                                    <li class="dot dot09"></li>
+                                    <li class="dot dot10"></li>
+                                    <li class="dot dot11"></li>
+                                    <li class="dot dot12"></li>
+                                </ul>
+                                <div class="ui-up-arrow" style="display: block;padding:0 0 10%;">
+                                    <a href="javascript:">
+                                        <img src="images/arrow-up.png" alt="滑动提示">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide page_end" data-hash="end">
+                            <div class="slide-wrapper fadeIn animated">
+                                <div class="guide-join-box borderout animated infinite delay_500ms">
+                                    <div class="guide-join borderout2 animated infinite delay_500ms">
+                                        <a class="clickhere" href="javascript:void(0)">
+                                            <img src="images/clickHere.png" alt="" />
+                                            <img src="images/iconsArea.png" alt="" class="qqshake animated infinite" />
+                                            <img src="images/endJoin.png" alt="开启直通车" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="landscape_notice">
+    <div class="text-center font-size-28 c-white">
+        <i class="fa fa-4x fa-mobile"></i><br><span>请将屏幕竖向浏览</span>
+    </div>
+</div>
+<script>
+    (new MobileSlider()).init();
+</script>
+</body>
+</html>

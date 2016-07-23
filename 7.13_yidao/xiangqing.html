@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			img{display: block;border: none;}
+			html,body{width: 100%;height: 100%;}
+			a{text-decoration: none;}
+			.box{width: 100%;height: 100%;display: -webkit-box;-webkit-box-orient: vertical;}
+			.head{width: 640px;height: 100px;background:#333333 ;}
+			.job{width: 630px;height: 100px;padding:5px 10px;}		
+			.zhiwei{width: 580px;height:50px;line-height: 50px;font-size: 25px;color: #ffffff;
+			font-weight: bold;}
+			
+			.didian{width: 620px;height:30px;font-size: 18px;color: #ffffff;font-weight: bold;}
+			.p_left{width: 220px;height: 30px;float: left;line-height:30px;}
+			.p_left img{float: left;width: 18px;height:18px;padding-top: 6px;}
+			.p_right{width: 100px;height:30px;float: left;line-height: 30px;}
+			.p_right img{float: left;width:18px;height: 18px;padding-top:6px;}
+			.zhiwei input{width: 25px;height: 25px;}
+			.main{-webkit-box-flex: 1;}
+			.main p{margin-left: 20px;margin-top: 25px;font-size: 25px;
+			margin-right: 15px;}
+			
+			.footer{width: 640px;height: 80px;background:#333333 ;position: fixed;bottom: 0;}
+			
+			.btn:visited {color: #fff;}
+			.btn_gray{color: #fff;}
+			.btn{display:inline-block;background: #ee4136;color: #fff;border-radius: 5px;
+			padding: 5px 15px;margin: 10px 11px;text-align: center;width: 262px;height: 45px;
+			line-height:55px ;font-size: 25px;}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+		<header class="head">
+			<div class="job">
+					<p class="zhiwei">急聘！用户运营高级经理-用户运营部 </p>
+					<div class="didian">
+						<p class="p_left"><img class="dingwei" src="images/dingwei2_03.png"/>海淀区</p>
+						<p class="p_right"><img class="shijian" src="images/biao2_03.png"/>08-12</p>
+					</div>
+			</div>
+		</header>
+		
+		<div class="main">
+			<p>工作职责： <br> <br>  
+			1、通过各种方式提升易到用车的老用户留存，提高用户购买次数，包括不限于用户生命周期搭建、精细化运营/数据化运营/数据分层营销、用户数据分析挖掘、会员体系搭建、积分激励、积分商城、基础保障等产品的策略、设计、运营、项目管理、数据分析、推广等<br> <br>
+			 2、持续挖掘用户需求，不断思考、探索增长点，整合内外部各种资源，完善易到会员用车全过程的用户体验 <br> <br> 
+			 3、积极探索更适合O2O领域提高会员忠诚的方法，提升老客重复消费，对用户的留存负责 <br> <br>   <br>  
+			 岗位要求： <br> <br> 
+			 1、五年相关工作经验以上； <br> <br> 
+			 2、重视并擅长数据分析，能够从数据中挖掘内在的隐性规律并给出有价值的分析建议报告； <br> <br> 
+			 3、具有良好的结构化思考能力，能将问题化繁为简； <br> <br> 
+			 4、具有良好的主人翁意识和创新精神，把困难当作挑战而非瓶颈 <br> <br>
+			 5、具有良好的跨部门沟通能力和团队协作能力，善于调动内外部各种资源； <br> <br> 
+			 6、有1~3年电商/O2O会员、积分、保障经验者优先。 <br>
+			</p>
+		</div>
+		
+		<footer class="footer">
+			<a id="deliverBtn" href="javascript:void(0);" class="btn flex1">申请</a>
+			<a id="recommendBtn" href="javascript:void(0);" class="btn flex1 btn_gray">推荐</a>
+		</footer>
+		
+		
+		
+		
+		
+		
+		
+		</div>
+		
+		
+	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		function bodyScale(){
+			var devicewidth=document.documentElement.clientWidth;
+			var scale=devicewidth/640;
+			document.body.style.zoom=scale;
+		}
+		window.onload=window.onresize=function(){
+			bodyScale();
+		}
+		
+		$(function(){
+			$('.checkbox').change(function(){
+				if($('.checkbox').is(':checked')){
+				
+				    $('.cb_c').prop('checked','checked')
+			    }else{
+				    $('.cb_c').prop('checked','')
+			    }
+			})
+			
+			$('.job').click(function(){
+				window.location.href="xiangqing.html"
+			})
+			
+		})
+	</script>
+	</body>
+</html>
